@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2020",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "rootDir": "src",
+    "sourceRoot": "src",
+    "outDir": "dist"
+//    "outFile": "dist/game.js"
+  },
+  "exclude": [
+    "node_modules",
+    "old"
+  ]
+}
