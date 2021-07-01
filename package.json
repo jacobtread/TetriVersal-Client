@@ -9,10 +9,23 @@
   "devDependencies": {
     "@types/pixi.js": "^5.0.0",
     "@types/ws": "^7.4.5",
-    "electron": "^13.1.4"
+    "electron": "^13.1.4",
+    "electron-builder": "^22.11.7"
   },
   "scripts": {
-    "start": "tsc && electron app.js"
+    "start": "tsc && electron app.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "tetriversal",
+    "directories": {
+      "output": "packed"
+    },
+    "files": [
+      "dist/**/*",
+      "app.js"
+    ]
   },
   "dependencies": {
     "pixi.js": "^6.0.4",
