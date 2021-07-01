@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TetriVersal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="screen" data-name="connect">
+    <img class="logo" src="logo-small.png" alt="TetriVersal" width="525" height="609">
+    <p class="text">Please select a server</p>
+    <label>Server List</label>
+    <div class="server-list">
+        <div class="server" data-address="127.0.0.1" data-port="80">
+            <h3 class="server__name">Localhost Server</h3>
+            <div class="server__details">
+                <span class="server__details__address">127.0.0.1</span>
+                <span class="server__details__port">80</span>
+            </div>
+        </div>
+        <div class="server" data-address="192.168.2.1" data-port="80">
+            <h3 class="server__name">Lan Server</h3>
+            <div class="server__details">
+                <span class="server__details__address">192.168.2.1</span>
+                <span class="server__details__port">80</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="screen screen--hidden" data-name="join">
+    <h1>Enter your name</h1>
+    <label>
+        <input type="text" placeholder="Player Name" id="name">
+    </label>
+    <button id="joinButton">Join</button>
+
+</div>
+<div class="screen screen--hidden" data-name="disconnected">
+    <h1 data-value="message"></h1>
+</div>
+<div class="screen screen--hidden" data-name="pregame">
+    <p class="uuid">UUID: <span data-value="uuid"></span></p>
+    <h1 class="title">In Lobby</h1>
+    <h2 class="text">Game starts in</h2>
+    <h1 class="start-timer" data-value="time">10</h1>
+    <label>Vote</label>
+    <div class="modes">
+        <div class="mode">
+            <h3 class="mode__name">Teamwork</h3>
+            <p class="mode__text">Work together on a large grid to get the highest score</p>
+            <button class="button vote__button" data-value="0">Vote</button>
+        </div>
+        <div class="mode">
+            <h3 class="mode__name">Control Swap</h3>
+            <p class="mode__text">The controls periodically swap between the players</p>
+            <button class="button vote__button" data-value="1">Vote</button>
+        </div>
+    </div>
+    <label>Player List</label>
+    <div class="player-list" id="players">
+
+    </div>
+    <template id="playerListTemplate">
+        <div class="player">
+            <h3 class="player__name" data-value="name"></h3>
+            <span class="player__uuid" data-value="uuid"></span>
+        </div>
+    </template>
+</div>
+<div class="screen screen--hidden" data-name="game">
+    <div id="gameCanvas"></div>
+</div>
+<script>exports = {}</script>
+<script src="game.js"></script>
+
+</body>
+</html>

@@ -7,7 +7,7 @@
     "esModuleInterop": true,
     "rootDir": "src",
     "sourceRoot": "src",
-    "outDir": "dist"
+    "outDir": "dist",
 //    "outFile": "dist/game.js"
   },
   "exclude": [

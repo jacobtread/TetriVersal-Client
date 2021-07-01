@@ -1,0 +1,133 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: Arial, sans-serif
+
+body
+  overflow: hidden
+  background-color: #222
+
+
+.screen
+  position: fixed
+  display: block
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  -webkit-app-region: drag
+
+  &--hidden
+    display: none
+
+.logo
+  max-width: 200px
+  width: 100%
+  height: auto
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5)
+  margin: 2em auto
+  display: block
+
+label
+  color: #7c7c7c
+  font-size: 1.2em
+  margin: 0.25em 1em
+
+input, button, .server
+  -webkit-app-region: no-drag !important
+
+
+.server
+  display: block
+  margin: 1em
+  padding: 0.5em
+  background-color: #3b3a3a
+  transition: background-color 0.1s
+  cursor: pointer
+
+  &:hover
+    background-color: #484848
+
+
+  &__name
+    color: #c1bebe
+    letter-spacing: 0.05em
+
+  &__details
+    color: gray
+    margin-top: 0.5em
+
+.title
+  display: block
+  color: white
+  text-align: center
+  margin: 0.5em auto
+
+.text
+  text-align: center
+  color: gray
+  font-size: 1.2em
+  margin: 0.2em
+
+input
+  display: block
+  padding: 1em
+  z-index: 99
+
+.start-timer
+  color: #79c843
+  font-weight: bold
+  font-size: 5rem
+  text-align: center
+  margin: 0.1em
+
+.modes
+  display: grid
+  margin: 1em
+  grid-template-columns: 1fr 1fr
+  grid-gap: 2em
+
+.mode
+  background-color: #3b3a3a
+  padding: 1em
+
+  &__name
+    color: white
+    margin-bottom: 0.2em
+
+  &__text
+    color: gray
+    line-height: 1.25
+
+.button
+  color: white
+  text-transform: uppercase
+  font-weight: bold
+  letter-spacing: 0.15em
+  padding: 1em 2em
+  background-color: #79c843
+  display: block
+  width: 100%
+  margin-top: 1em
+  border: none
+  cursor: pointer
+
+.uuid
+  position: fixed
+  left: 1em
+  bottom: 1em
+  color: gray
+
+
+.player-list
+  margin: 1em
+
+.player
+  background-color: #3b3a3a
+  padding: 1em
+
+  &__name
+    color: white
+  &__uuid
+    color: gray
